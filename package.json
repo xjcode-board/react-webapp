@@ -1,0 +1,48 @@
+{
+  "name": "react-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "author": "devin",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "env-cmd": "^10.1.0",
+    "lib-flexible": "^0.3.2",
+    "loadable-components": "^2.2.3",
+    "node-sass": "^4.13.1",
+    "qrcode.react": "^1.0.0",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.3.0"
+  },
+  "homepage": ".",
+  "scripts": {
+    "start": "env-cmd -e development react-scripts start",
+    "build": "react-scripts build",
+    "build:test": "env-cmd -e test npm run build",
+    "build:pre": "env-cmd -e prelease npm run build",
+    "build:pro": "env-cmd -e production npm run build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://t-api.com",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

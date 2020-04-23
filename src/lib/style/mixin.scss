@@ -1,0 +1,101 @@
+$imgUrl: '../../assets/images/';
+$font_size:75px;
+$gray: #EAEAEA;
+
+.backgroundImage {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inlineBlock {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.verticalCenter {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    -webkit-box-flex: 1;
+    visibility: hidden;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.clear {
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@mixin border_1px($type: default, $color: $gray) {
+  position: relative;
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    @if $type == default {
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      border: 1px solid $color;
+    } @else if $type == top {
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 1px;
+      background: $color;
+    } @else if $type == bottom {
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 1px;
+      background: $color;
+    } @else if $type == left {
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 200%;
+      background: $color;
+    } @else if $type == right {
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 200%;
+      background: $color;
+    }
+    transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+}
+
+@mixin border-radius ($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@function rems($pixels) {
+    @return $pixels / $font_size+rem;
+}
+
+
