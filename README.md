@@ -1,6 +1,5 @@
-## 项目基于[Create React App](https://github.com/facebook/create-react-app).纯净版未eject暂不支持任何UI框架
+## 项目基于[Create React App](https://github.com/facebook/create-react-app).
 
-## 
 
 在项目中，你可以执行:
 
